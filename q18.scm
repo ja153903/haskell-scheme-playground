@@ -8,8 +8,8 @@
         (else 
             (let break-up-list ((building-lst `()) (head (car lst)) (tail (cdr lst)))
                  (append (map (lambda (x) (cons head x)) (permute-list (append building-lst tail)))
-                       (if (null? tail) `()
-                           (break-up-list (cons head building-lst) (car tail) (cdr tail)))
+                         (if (null? tail) `()
+                             (break-up-list (cons head building-lst) (car tail) (cdr tail)))
                  )
             )
         )
